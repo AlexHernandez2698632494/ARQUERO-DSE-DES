@@ -274,4 +274,4 @@ const App = () => {
   );
 };
 
-export default Chatbot;
+export default App;
