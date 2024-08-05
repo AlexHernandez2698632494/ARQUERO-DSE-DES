@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot"; // Asegúrate de crear este componente
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+const Home = () => (
+  <div className="home-container" id="home">
+    <Navbar />
+    <div className="hero-image">
+      <img src="/arquero.jpg" alt="Investigacion Aplicada" />
+    </div>
+    <div className="info-container">
+      <div className="column first-column"></div>
+      <div className="column image-column">
+        <img src="/investigacion_aplicada.jpg" alt="Arquero" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <div className="column description-column" id="sinopsis">
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          Una institución de educación superior busca optimizar el servicio al
+          estudiante implementando un chatbot capaz de manejar preguntas
+          frecuentes y ofrecer asistencia básica de manera eficiente.
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      <div className="column details-column">
+        <p>Dirección</p>
+        <p></p>
+        <p>Escrita por</p>
+        <p>Alex Romero</p>
+        <p>Reparto</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+      <div className="column fifth-column"></div>
+    </div>
+    <div className="separator-line"></div>
+    <Footer />
+  </div>
+);
 
-export default App
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/chatbot" element={<Chatbot />} />
+        {/* Agrega otras rutas aquí si es necesario */}
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
