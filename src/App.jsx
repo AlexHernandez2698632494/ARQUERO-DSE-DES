@@ -29,6 +29,7 @@ const Home = () => (
         <p>Escrita por</p>
         <p>Alex Romero</p>
         <p>Reparto</p>
+        <p>Angel Cartageana</p>
         <p></p>
         <p></p>
         <p></p>
