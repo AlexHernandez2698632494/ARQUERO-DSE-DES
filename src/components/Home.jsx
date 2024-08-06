@@ -8,7 +8,7 @@ const Home = () => (
       <div className="info-container">
         <div className="column first-column"></div>
         <div className="column image-column">
-          <img src="public/img/investigacion aplicada.gif" alt="Arquero" />
+          <img src="public/img/investigacion-aplicada.gif" alt="Arquero" />
         </div>
         <div className="column description-column" id="sinopsis">
           <p>
