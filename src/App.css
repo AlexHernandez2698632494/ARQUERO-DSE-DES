@@ -1,61 +1,89 @@
-body, html, .App {
+.home-container {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
   overflow-x: hidden;
-  color: #000;
-}
-
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .hero-image {
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: #000; /* Ajusta según el diseño */
+  align-items: center;
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Asegura que la imagen cubra todo el área */
+  object-position: center; /* Centra la imagen */
 }
 
 .info-container {
-  width: 100%;
-  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
-  background-color: white;
+  flex-direction: row;
+  background: linear-gradient(to right, #010724, #0755A9, #48B52C, #003418);
+  color: white;
+  padding: 20px;
+  gap: 20px; /* Agrega espacio entre las columnas */
 }
 
+
 .column {
-  flex: 1;
-  margin: 10px;
-  min-width: 200px; /* Ajusta según el diseño */
+  padding: 10px;
+}
+
+.first-column {
+  width: 10%;
+}
+
+.image-column {
+  width: 30%;
+  display: flex;
+  align-items: center;
 }
 
 .image-column img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit:fill;
+}
+.description-column {
+  width: 40%;
 }
 
-.separator-line {
-  width: 100%;
-  height: 1px;
-  background-color: #000; /* Ajusta según el diseño */
+.details-column {
+  width: 20%;
 }
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.details-column p {
+  margin: 10px 0;
 }
+
+.fifth-column {
+  width: 10%;
+}
+
+.description-column p {
+  margin: 10px 0;
+}
+
+/* Ajustar los márgenes entre columnas */
+.image-column, .description-column, .details-column {
+  margin: 0 20px; /* Ajusta el valor según el espacio deseado */
+}
+
+html {
+  overflow: auto; /* Permite el desplazamiento */
+}
+
+html::-webkit-scrollbar {
+  width: 0px; /* O ocultar la barra de desplazamiento */
+  background: transparent; /* Asegura que no haya espacio para la barra */
+}
+
+html {
+  scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+  -ms-overflow-style: none; /* Oculta la barra de desplazamiento en Edge */
+}
+
