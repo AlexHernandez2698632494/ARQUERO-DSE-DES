@@ -1,0 +1,113 @@
+/* Register.css */
+
+body{
+  background: linear-gradient(to right, #010724, #0755A9, #48B52C, #003418);
+}
+.register {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-left: 550px; 
+}
+
+.register-container {
+  display: flex;
+  flex: 1;
+}
+
+.register-form-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.register-form {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-form input {
+  width: calc(100% - 20px); /* Restar el espacio de margen */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 20px; /* Ajusta este valor según el espacio deseado */
+}
+
+.register-form button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to top, #153999, #429FED, #1C49A6, #081D5E, #031240); /* Degradado */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  background: linear-gradient(to top, #191c26, #1b2123, #020A0E, #040c10);  
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal-content button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: transparent;  
+  color: rgb(255, 255, 255);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+.login-link {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ffffff; /* Color de texto */
+  text-align: center;
+}
+
+.login-link a {
+  color: #ffffff; /* Color del enlace */
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón por encima */
+}
+

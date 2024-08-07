@@ -1,0 +1,56 @@
+/* src/components/VerticalNav.css */
+.vertical-nav {
+    width: 400px;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background: url('/public/img/arquero2.gif') no-repeat center center; /* Imagen de fondo */
+    background-size: cover; /* Cubre todo el contenedor */
+    position: fixed; /* Fijo en la pantalla */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column; /* Alinea los botones verticalmente */
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.menu-button {
+    background: none; /* Sin fondo */
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    align-self: flex-start; /* Alinea el botón de menú a la izquierda */
+}
+
+.close-nav {
+    background: none; /* Sin fondo */
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute; /* Posiciona el botón de cierre en un lugar específico */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde el lado derecho */
+}
+
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-items button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+}

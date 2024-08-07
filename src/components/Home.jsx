@@ -19,16 +19,15 @@ const Home = () => (
         </div>
         <div className="column details-column">
           <p>Dirección</p>
-          <p></p>
+          <p>Emerson Cartagena</p>
           <p>Escrita por</p>
           <p>Alex Romero</p>
           <p>Reparto</p>
           <p>Angel Cartageana</p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
+          <p>Daniel Castellanos</p>
+          <p>Jeanluca Chaves</p>
+          <p>Angel Sanches</p>
+          <p>Carlos Siliézar </p>
         </div>
         <div className="column fifth-column"></div>
       </div>

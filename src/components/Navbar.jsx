@@ -15,8 +15,8 @@ const Navbar = () => {
         ☰
       </button>
       <div className="navbar-buttons">
-        <button>Iniciar sesión</button>
-        <Link to="/chatbot"><button>Chatbot</button></Link>
+      <Link to="/login"><button>Iniciar Sesión</button></Link>
+      <Link to="/chatbot"><button>Chatbot</button></Link>
       </div>
       {isMenuOpen && (
         <div className="full-screen-menu">

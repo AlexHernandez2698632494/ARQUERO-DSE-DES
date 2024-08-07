@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Contenet from "./components/Home";
 import Footer from "./components/Footer";
 import Chatbot from "./components/Chatbot"; // Asegúrate de crear este componente
+import Login from "./components/Login"; // Importa el componente de inicio de sesión
+import Register from "./components/Register"; // Importa el componente de registro
 import "./App.css";
 
 const Home = () => (
@@ -19,6 +21,8 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/chatbot" element={<Chatbot />} />
         {/* Agrega otras rutas aquí si es necesario */}
       </Routes>
