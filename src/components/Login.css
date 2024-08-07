@@ -1,0 +1,60 @@
+/* Login.css */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-left: 550px;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: center;
+  width: 300px;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  width: calc(100% - 20px); /* Restar el espacio de margen */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 20px; /* Ajusta este valor según el espacio deseado */
+}
+
+.login-box button {
+    background: linear-gradient(to top, #153999, #429FED, #1C49A6, #081D5E, #031240); /* Degradado */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .login-box p {
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+  }
