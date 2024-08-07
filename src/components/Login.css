@@ -43,18 +43,24 @@
 }
 
 .login-box button {
-    background: linear-gradient(to top, #153999, #429FED, #1C49A6, #081D5E, #031240); /* Degradado */
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    margin: 10px 0;
-  }
-  
-  .login-box p {
-    color: white;
-    margin-top: 20px;
-    cursor: pointer;
-  }
+  background: linear-gradient(to top, #153999, #429FED, #1C49A6, #081D5E, #031240); /* Degradado */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.login-box p {
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0;
+}
