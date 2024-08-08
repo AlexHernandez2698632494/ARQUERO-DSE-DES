@@ -1,18 +1,19 @@
 import React from 'react';
 import Chatbot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
-import './Chatbot.css';
+import  './Chatbot.css';
+
 
 const theme = {
-  background: '#ffffff', 
-  fontFamily: 'Arial, sans-serif', 
-  headerBgColor: '#ff6347', 
-  headerFontColor: '#fff', 
+  background: 'transparent', // fondo del CSS
+  fontFamily: 'Arial, sans-serif',
+  headerBgColor: '#153999', 
+  headerFontColor: '#fff',
   headerFontSize: '18px',
-  botBubbleColor: '#ff6347',
-  botFontColor: '#fff', 
-  userBubbleColor: '#e0e0e0', 
-  userFontColor: '#333', 
+  botBubbleColor: '#153999', 
+  botFontColor: '#fff',
+  userBubbleColor: '#e0e0e0',
+  userFontColor: '#333',
 };
 
 const CustomComponent = ({ steps }) => {
@@ -20,27 +21,21 @@ const CustomComponent = ({ steps }) => {
 
   let content;
   if (userInput.includes('calendario')) {
-    content = (
-      <div>
-        El calendario académico es...
-        <img src={miImagen} alt="Calendario académico" style={{ width: '200px', height: '200px' }} />
-        <br />
-      </div>
-    );
+    content = <div>El calendario académico para este semestre se encuentra en el portal web oficial de la Universidad Don Bosco, en la sección de estudiantes o académica. También puedes obtenerlo en la secretaría de tu facultad.</div>;
   } else if (userInput.includes('horario') || userInput.includes('clases')) {
-    content = <div>Puedes encontrar tu horario de clases en...</div>;
+    content = <div>Tu horario de clases está disponible en el portal de estudiantes de la universidad. Inicia sesión con tus credenciales de estudiante para acceder a tu horario específico.</div>;
   } else if (userInput.includes('inscripción')) {
-    content = <div>Los períodos de inscripción para cursos son...</div>;
+    content = <div>Los períodos de inscripción para cursos se anuncian en el calendario académico y también se comunican a través del portal de estudiantes y las redes sociales de la universidad.</div>;
   } else if (userInput.includes('biblioteca')) {
-    content = <div>La biblioteca se encuentra en el edificio principal. Sus horarios son de lunes a viernes de 8:00 am a 6:00 pm.</div>;
+    content = <div>La biblioteca de la Universidad Don Bosco suele estar ubicada en el campus principal. Sus horarios son de lunes a viernes de 7:00 am a 5:00 pm.</div>;
   } else if (userInput.includes('servicio estudiantil') || userInput.includes('departamento')) {
-    content = <div>Puedes contactar al departamento de servicios estudiantiles al número XXX-XXXX o enviando un correo electrónico a servicios.estudiantiles@ejemplo.com.</div>;
+    content = <div>Puedes contactar al departamento de servicios estudiantiles a través del portal de la universidad, por correo electrónico o por teléfono. La información de contacto debe estar disponible en la sección de servicios estudiantiles del sitio web de la universidad.</div>;
   } else if (userInput.includes('evento importante') || userInput.includes('eventos')) {
-    content = <div>Sí, esta semana se llevará a cabo un evento importante en el campus. Será el día XX a las XX horas en el auditorio principal.</div>;
+    content = <div>Los eventos importantes se anuncian en el calendario de eventos de la universidad, que puede encontrarse en el sitio web oficial y en las redes sociales de la universidad.</div>;
   } else if (userInput.includes('ayuda') || userInput.includes('problemas') || userInput.includes('estres')) {
-    content = <div>Puedes obtener ayuda si estás experimentando estrés o problemas emocionales en el departamento de salud mental de la universidad. Puedes visitarlos en la ubicación X o llamar al número XXX-XXXX para programar una cita.</div>;
+    content = <div>La universidad tiene un centro de bienestar o servicios psicológicos donde puedes obtener ayuda. Estos servicios pueden incluir consejería y apoyo emocional. Verifica la ubicación y los horarios en el sitio web de la universidad o consulta en el departamento de servicios estudiantiles.</div>;
   } else if (userInput.includes('recursos') || userInput.includes('discapacidad')) {
-    content = <div>Los recursos disponibles para estudiantes con discapacidades incluyen servicios de apoyo académico, adaptaciones en el aula y acceso a tecnología asistiva. Puedes comunicarte con la oficina de servicios para estudiantes con discapacidades para obtener más información.</div>;
+    content = <div>La Universidad Don Bosco ofrece recursos y apoyo para estudiantes con discapacidades. Estos pueden incluir adaptaciones en el aula, tecnología asistiva y servicios de tutoría. Contacta al departamento de servicios estudiantiles para obtener más información.</div>;
   } else if (userInput.includes('asesoramiento') || userInput.includes('tutoria')) {
     content = <div>Existen varios servicios de asesoramiento y tutoría disponibles para mejorar tu rendimiento académico. Puedes visitar el centro de tutorías o comunicarte con el departamento de asesoramiento académico para obtener más información.</div>;
   } else if (userInput.includes('pasantías')) {
@@ -52,17 +47,18 @@ const CustomComponent = ({ steps }) => {
   } else if (userInput.includes('clubes') || userInput.includes('actividades')) {
     content = <div>Hay una variedad de clubes y actividades extracurriculares disponibles en el campus. Puedes obtener más información en la oficina de vida estudiantil o en el sitio web de la universidad.</div>;
   } else if (userInput.includes('actividad') || userInput.includes('fin de semana')) {
-    content = <div>Sí, hay una actividad interesante planeada para el fin de semana. Será el día XX a las XX horas en el lugar X. Puedes obtener más información en la oficina de vida estudiantil o en el sitio web de la universidad.</div>;
+    content = <div>Las actividades del fin de semana se anuncian en el calendario de eventos de la universidad. Consulta el sitio web oficial y las redes sociales para obtener la información más reciente.</div>;
   } else if (userInput.includes('alimentacion') || userInput.includes('cafeterias')) {
-    content = <div>En el campus, hay varias opciones de alimentación disponibles, como cafeterías, restaurantes y food trucks. Puedes encontrar más información sobre los lugares y horarios en la oficina de vida estudiantil o en el sitio web de la universidad.</div>;
+    content = <div>El campus generalmente cuenta con cafeterías y comedores que ofrecen una variedad de opciones de alimentos. Los horarios y menús específicos pueden variar.</div>;
   } else {
     content = <div>No entendí tu solicitud. Por favor, elige una opción o proporciona más detalles.</div>;
   }
 
+
   return content;
 };
 
-const App = () => {
+const chatbot = () => {
   const steps = [
     {
       id: '1',
@@ -107,7 +103,7 @@ const App = () => {
       options: [
         { value: 'Información académica y administrativa', label: 'Información académica y administrativa', trigger: '9' },
         { value: 'Recursos y servicios del campus', label: 'Recursos y servicios del campus', trigger: '10' },
-        { value: 'Apoyo y bienestar estudiantil', label: 'Apoyo y bienestar estudiantil', trigger: '11' },
+        { value: 'Apoyo y bienestar estudiantil',  label : 'Apoyo y bienestar estudiantil', trigger: '11' },
         { value: 'Orientación sobre carrera y desarrollo profesional', label: 'Orientación sobre carrera y desarrollo profesional', trigger: '12' },
         { value: 'Vida estudiantil y eventos sociales', label: 'Vida estudiantil y eventos sociales', trigger: '13' },
       ],
@@ -179,45 +175,45 @@ const App = () => {
       id: '17',
       message: 'Gracias por seguir con nosotros',
       trigger: '5',
-    },
+   },   
     {
       id: '18',
-      message: 'Puedes encontrar tu Calendario Académico en... ',
+      message: 'El calendario académico para este semestre se encuentra en el portal web oficial de la Universidad Don Bosco, en la sección de estudiantes o académica. También puedes obtenerlo en la secretaría de tu facultad.',
       trigger: '15',
     },
     {
       id: '19',
-      message: 'Puedes encontrar tu horario de clases en...',
+      message: 'Tu horario de clases está disponible en el portal de estudiantes de la universidad. Inicia sesión con tus credenciales de estudiante para acceder a tu horario específico.',
       trigger: '15',
     },
     {
       id: '20',
-      message: 'Los períodos de inscripción para cursos son...',
+      message: 'Los períodos de inscripción para cursos se anuncian en el calendario académico y también se comunican a través del portal de estudiantes y las redes sociales de la universidad.',
       trigger: '15',
     },
     {
       id: '21',
-      message: 'La biblioteca se encuentra en el edificio principal. Sus horarios son de lunes a viernes de 8:00 am a 6:00 pm.',
+      message: 'La biblioteca de la Universidad Don Bosco suele estar ubicada en el campus principal. Sus horarios son de lunes a viernes de 7:00 am a 5:00 pm.',
       trigger: '15',
     },
     {
       id: '22',
-      message: 'Puedes contactar al departamento de servicios estudiantiles al número XXX-XXXX o enviando un correo electrónico a servicios.estudiantiles@ejemplo.com.',
+      message: 'Puedes contactar al departamento de servicios estudiantiles a través del portal de la universidad, por correo electrónico o por teléfono. La información de contacto debe estar disponible en la sección de servicios estudiantiles del sitio web de la universidad.',
       trigger: '15',
     },
     {
       id: '23',
-      message: 'Sí, esta semana se llevará a cabo un evento importante en el campus. Será el día XX a las XX horas en el auditorio principal.',
+      message: 'Los eventos importantes se anuncian en el calendario de eventos de la universidad, que puede encontrarse en el sitio web oficial y en las redes sociales de la universidad.',
       trigger: '15',
     },
     {
       id: '24',
-      message: 'Puedes obtener ayuda si estás experimentando estrés o problemas emocionales en el departamento de salud mental de la universidad. Puedes visitarlos en la ubicación X o llamar al número XXX-XXXX para programar una cita.',
+      message: 'La universidad tiene un centro de bienestar o servicios psicológicos donde puedes obtener ayuda. Estos servicios pueden incluir consejería y apoyo emocional. Verifica la ubicación y los horarios en el sitio web de la universidad o consulta en el departamento de servicios estudiantiles.',
       trigger: '15',
     },
     {
       id: '25',
-      message: 'Los recursos disponibles para estudiantes con discapacidades incluyen servicios de apoyo académico, adaptaciones en el aula y acceso a tecnología asistiva. Puedes comunicarte con la oficina de servicios para estudiantes con discapacidades para obtener más información.',
+      message: 'La Universidad Don Bosco ofrece recursos y apoyo para estudiantes con discapacidades. Estos pueden incluir adaptaciones en el aula, tecnología asistiva y servicios de tutoría. Contacta al departamento de servicios estudiantiles para obtener más información.',
       trigger: '15',
     },
     {
@@ -247,12 +243,12 @@ const App = () => {
     },
     {
       id: '31',
-      message: 'Sí, hay una actividad interesante planeada para el fin de semana. Será el día XX a las XX horas en el lugar X. Puedes obtener más información en la oficina de vida estudiantil o en el sitio web de la universidad.',
+      message: 'Las actividades del fin de semana se anuncian en el calendario de eventos de la universidad. Consulta el sitio web oficial y las redes sociales para obtener la información más reciente.',
       trigger: '15',
     },
     {
       id: '32',
-      message: 'En el campus, hay varias opciones de alimentación disponibles, como cafeterías, restaurantes y food trucks. Puedes encontrar más información sobre los lugares y horarios en la oficina de vida estudiantil o en el sitio web de la universidad.',
+      message: 'El campus generalmente cuenta con cafeterías y comedores que ofrecen una variedad de opciones de alimentos. Los horarios y menús específicos pueden variar.',
       trigger: '15',
     },
   ];
@@ -261,11 +257,10 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <Chatbot
         steps={steps}
-        speechSynthesis={{ enable: true, lang: 'es' }}
         handleEnd={() => console.log('Chatbot conversation ended.')}
       />
     </ThemeProvider>
   );
 };
 
-export default App;
+export default chatbot;
