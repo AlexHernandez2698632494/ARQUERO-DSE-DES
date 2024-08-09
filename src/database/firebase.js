@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCMnOXwp1gwOTqEk0bgmLxqkOZM9Wum-PM",
-    authDomain: "arquero-7ac82.firebaseapp.com",
-    projectId: "arquero-7ac82",
-    storageBucket: "arquero-7ac82.appspot.com",
-    messagingSenderId: "1061877921990",
-    appId: "1:1061877921990:web:5a6324e1ea097ed6737fc7"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
   };
   
   // Initialize Firebase
